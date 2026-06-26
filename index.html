@@ -3,147 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Felipe & Lídia - 21.11.2026</title>
+<title>Felipe & Lídia | 21.11.2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 <style>
-:root{
-  --marsala:#4A1D2A; /* Marsala escuro, nada de rosa */
-  --marsala-claro:#F5F1E8;
-  --dourado:#C9A86A;
-  --texto:#3A3A3A;
-}
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:'Georgia',serif;
-  background:var(--marsala-claro);
-  color:var(--texto);
-  text-align:center;
-  line-height:1.6;
-}
-header{
-  background:var(--marsala);
-  color:#fff;
-  padding:90px 20px 70px;
-}
-h1{
-  font-family: 'Brush Script MT', cursive;
-  font-size:50px;
-  margin:0 0 10px;
-  letter-spacing:1px;
-}
-header p{margin:5px 0;font-size:18px}
-.data{font-size:22px;color:var(--dourado);margin:20px 0;font-weight:bold}
-.versiculo{
-  font-style:italic;
-  margin-top:20px;
-  font-size:15px;
-  max-width:500px;
-  margin-left:auto;
-  margin-right:auto;
-}
-section{
-  padding:50px 20px;
-  max-width:700px;
-  margin:auto;
-}
-h2{
-  color:var(--marsala);
-  font-size:26px;
-  margin-bottom:15px;
-  border-bottom:2px solid var(--dourado);
-  display:inline-block;
-  padding-bottom:5px;
-}
-.btn{
-  display:inline-block;
-  margin:10px 8px;
-  padding:14px 28px;
-  background:var(--marsala);
-  color:#fff;
-  text-decoration:none;
-  border-radius:30px;
-  font-weight:bold;
-  border:1px solid var(--dourado);
-  transition:0.3s;
-}
-.btn:hover{background:#6A2C3E}
-.galeria{
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap:12px;
-  margin-top:20px;
-}
-.galeria img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  border-radius:10px;
-  border:2px solid var(--dourado);
-}
-footer{
-  background:var(--marsala);
-  color:var(--marsala-claro);
-  padding:30px 20px;
-  font-size:15px;
-}
-footer a{color:var(--dourado)}
+:root{--marsala:#2F0E1A; --ouro:#E0C084; --creme:#FBF9F6;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Lato',sans-serif;background:var(--creme);color:#222;}
+.fade-up{opacity:0;transform:translateY(30px);animation:fadeUp 1s ease forwards;}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0);}}
+.hero{height:100vh;background:linear-gradient(180deg, rgba(47,14,26,0.85) 0%, rgba(47,14,26,0.6) 100%), url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070') center/cover fixed;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff;padding:20px;}
+.monograma{font-family:'Cormorant Garamond',serif;font-size:90px;font-weight:600;color:var(--ouro);border:2px solid var(--ouro);width:120px;height:120px;display:flex;align-items:center;justify-content:center;border-radius:50%;margin-bottom:20px;animation: fadeUp 1.2s ease 0.2s both;}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:65px;font-weight:700;letter-spacing:8px;text-transform:uppercase;animation: fadeUp 1.2s ease 0.4s both;}
+.hero .sub{font-size:18px;font-weight:300;letter-spacing:3px;margin:15px 0;animation: fadeUp 1.2s ease 0.6s both;}
+.data-box{border:1px solid var(--ouro);padding:12px 30px;font-size:20px;letter-spacing:4px;margin-top:20px;animation: fadeUp 1.2s ease 0.8s both;}
+.versiculo{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;max-width:650px;margin-top:40px;line-height:1.6;opacity:0.9;animation: fadeUp 1.2s ease 1s both;}
+section{padding:100px 20px;}
+.container{max-width:900px;margin:0 auto;text-align:center;}
+.card{background:rgba(251,249,246,0.8);backdrop-filter:blur(10px);border:1px solid rgba(224,192,132,0.3);padding:60px 40px;}
+.titulo{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:var(--marsala);margin-bottom:10px;letter-spacing:2px;}
+.divider{width:80px;height:1px;background:var(--ouro);margin:20px auto 30px;}
+.texto{font-size:18px;line-height:1.9;font-weight:300;max-width:600px;margin:0 auto;}
+.mosaico{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:280px 280px;gap:15px;margin-top:40px;}
+.mosaico img{width:100%;height:100%;object-fit:cover;filter:grayscale(20%);transition:all 0.5s ease;border-radius:2px;}
+.mosaico img:hover{filter:grayscale(0%);transform:scale(1.02);}
+.mosaico .big{grid-row:span 2;}
+.btn-luxo{display:inline-block;margin:10px;padding:18px 40px;background:var(--marsala);color:var(--ouro);text-decoration:none;font-size:13px;letter-spacing:2px;text-transform:uppercase;border:1px solid var(--ouro);transition:all 0.4s ease;}
+.btn-luxo:hover{background:var(--ouro);color:var(--marsala);}
+.countdown{display:flex;justify-content:center;gap:30px;margin:40px 0;flex-wrap:wrap;}
+.countdown div{text-align:center;}
+.countdown span{font-family:'Cormorant Garamond',serif;font-size:50px;color:var(--marsala);display:block;font-weight:600;}
+.countdown p{font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-top:5px;}
+footer{background:var(--marsala);color:var(--creme);padding:60px 20px;text-align:center;}
 </style>
 </head>
 <body>
 
-<header>
+<header class="hero">
+  <div class="monograma">F&L</div>
   <h1>Felipe & Lídia</h1>
-  <p>Com alegria em nossos corações, convidamos você</p>
-  <p class="data">21.11.2026 às 15:30</p>
-  <p class="versiculo">"Portanto, o que Deus ajuntou não o separe o homem." - Mateus 19:6</p>
+  <p class="sub">Unidos por Deus, por Amor e para Sempre</p>
+  <div class="data-box">21 . NOVEMBRO . 2026</div>
+  <p class="versiculo">“Melhor serem dois do que um... Se caírem, um levantará o outro.” <br> Eclesiastes 4:9-10</p>
 </header>
 
 <section>
-  <h2>Nossa História</h2>
-  <p>Nos conhecemos desde pequenos, e depois de muito tempo a vida nos uniu. Hoje, com muita alegria e amor, aqui começa o nosso para sempre.</p>
-</section>
-
-<section>
-  <h2>Nossos Momentos</h2>
-  <div class="galeria">
-    <img src="https://i.imgur.com/SEU_LINK1.jpg" alt="Foto 1">
-    <img src="https://i.imgur.com/SEU_LINK2.jpg" alt="Foto 2">
-    <img src="https://i.imgur.com/SEU_LINK3.jpg" alt="Foto 3">
-    <img src="https://i.imgur.com/SEU_LINK4.jpg" alt="Foto 4">
+  <div class="container">
+    <div class="card">
+      <h2 class="titulo">O Grande Dia Chega Em</h2>
+      <div class="divider"></div>
+      <div class="countdown" id="contador"></div>
+      <p class="texto">Nossa história começou há muito tempo, mas o capítulo mais bonito começa agora. Conte com a sua presença para abençoar o início da nossa família.</p>
+    </div>
   </div>
-  <p style="font-size:13px;margin-top:10px">Dica: Suba suas fotos no imgur.com e cole os links aqui</p>
+</section>
+
+<section style="background:#fff;">
+  <div class="container">
+    <h2 class="titulo">Momentos Nossos</h2>
+    <div class="divider"></div>
+    <div class="mosaico">
+      <!-- TROCA SÓ OS LINKS ABAIXO PELAS SUAS 3 FOTOS DO IMGUR -->
+      <img class="big" src="https://i.imgur.com/JqYeZ8K.jpg" alt="Foto 1">
+      <img src="https://i.imgur.com/8KmNP7w.jpg" alt="Foto 2">
+      <img src="https://i.imgur.com/kzAXX4H.jpg" alt="Foto 3">
+    </div>
+  </div>
 </section>
 
 <section>
-  <h2>Cerimônia & Recepção</h2>
-  <p><b>Sábado, 21 de Novembro de 2026</b><br>às 15:30</p>
-  <a class="btn" href="https://maps.app.goo.gl/H1RjYkrwpWarzjrP9?g_st=ac" target="_blank">Como chegar</a>
+  <div class="container">
+    <div class="card">
+      <h2 class="titulo">Cerimônia</h2>
+      <div class="divider"></div>
+      <p class="texto"><b>21 de Novembro de 2026 • 15:30</b><br>[Nome do Espaço]<br>[Endereço Completo]</p>
+      <a class="btn-luxo" href="https://maps.app.goo.gl/H1RjYkrwpWarzjrP9?g_st=ac" target="_blank">Localização</a>
+    </div>
+  </div>
 </section>
 
-<section>
-  <h2>Lista de Presentes</h2>
-  <p>Sua presença é o maior presente, mas se quiser nos abençoar:</p>
-  <a class="btn" href="https://casamento-hbhb.listaideal.com.br/pt" target="_blank">Acessar Lista</a>
-</section>
-
-<section>
-  <h2>Playlist do Casamento</h2>
-  <p>Ajude a montar a trilha sonora da nossa festa:</p>
-  <a class="btn" href="https://open.spotify.com/playlist/5Dw2JDAKQCVReBWYXA0bvc" target="_blank">Sugerir uma música</a>
-</section>
-
-<section>
-  <h2>Confirme sua Presença</h2>
-  <p>Por favor, confirme até <b>21/09/2026</b></p>
-  <a class="btn" href="https://wa.me/5581994388486?text=Eu%20vou%20ao%20casamento%20do%20Felipe%20e%20Lidia%2021/11" target="_blank">Sim, vou</a>
-  <a class="btn" href="https://wa.me/5581994388486?text=Infelizmente%20não%20poderei%20ir%20ao%20casamento" target="_blank">Não poderei</a>
+<section style="background:#fff;">
+  <div class="container">
+    <h2 class="titulo">Celebre Conosco</h2>
+    <div class="divider"></div>
+    <a class="btn-luxo" href="https://casamento-hbhb.listaideal.com.br/pt" target="_blank">Lista de Presentes</a>
+    <a class="btn-luxo" href="https://open.spotify.com/playlist/5Dw2JDAKQCVReBWYXA0bvc" target="_blank">Sugira uma Música</a>
+    <a class="btn-luxo" href="https://wa.me/5581994388486?text=Confirmo%20presenca%2021/11" target="_blank">Confirmar Presença</a>
+    <p style="margin-top:20px;font-size:14px;"><b>Confirme sua presença até 21/09/2026</b></p> <!-- CORRIGIDO -->
+  </div>
 </section>
 
 <footer>
-  <p><b>Dress code:</b> Esporte fino</p>
-  <p><b>Dúvidas:</b> 81 9 9438-8486</p>
-  <p style="margin-top:15px;font-size:13px;opacity:0.8">Com amor, Felipe & Lídia ❤️ 21.11.2026</p>
+  <p><b>Dress Code:</b> Gala | Tons Marsala e Dourado</p>
+  <p>Contato: 81 9 9438-8486</p>
+  <p style="margin-top:20px;opacity:0.6">Felipe & Lídia • 21.11.2026</p>
 </footer>
+
+<script>
+const dataCasamento = new Date("Nov 21, 2026 15:30:00").getTime();
+setInterval(()=>{
+  const d = dataCasamento - new Date().getTime();
+  if(d < 0){document.getElementById("contador").innerHTML = "<h3 style='font-family:Cormorant Garamond'>Chegou o grande dia!</h3>"; return;}
+  document.getElementById("contador").innerHTML = `
+    <div><span>${Math.floor(d/(1000*60*60*24))}</span><p>Dias</p></div>
+    <div><span>${Math.floor((d%(1000*60*60*24))/(1000*60*60))}</span><p>Horas</p></div>
+    <div><span>${Math.floor((d%(1000*60*60))/(1000*60))}</span><p>Min</p></div>
+    <div><span>${Math.floor((d%(1000*60))/1000)}</span><p>Seg</p></div>`;
+},1000);
+</script>
 
 </body>
 </html>
